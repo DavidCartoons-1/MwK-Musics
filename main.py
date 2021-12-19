@@ -27,7 +27,7 @@ bot.run(main())
 bot.start()
 @bot.on_message(filters.command("update") & filters.user(Config.ADMINS))
 def restart(client, message):
-    message.reply_text("Updating Bot...")
+    message.reply_text("**Updating...⏳**")
     Thread(
         target=stop_and_restart
         ).start()
